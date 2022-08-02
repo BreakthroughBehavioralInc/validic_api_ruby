@@ -6,8 +6,6 @@ module ValidicApi
 
     def initialize
       @api_base = "https://api.v2.validic.com"
-      @org_id = ENV["VALIDIC_ORG_ID"]
-      @token = ENV["VALIDIC_TOKEN"]
       @org_url = "#{api_base}/organizations/#{org_id}"
     end
   end
