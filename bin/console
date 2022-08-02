@@ -11,8 +11,8 @@ require "dotenv/load"
 # require "pry"
 # Pry.start
 
-ValidicApi.api_key = ENV["VALIDIC_ORG_ID"]
-ValidicApi.api_secret = ENV["VALIDIC_TOKEN"]
+ValidicApi.org_id = ENV["VALIDIC_ORG_ID"]
+ValidicApi.token = ENV["VALIDIC_TOKEN"]
 
 require "irb"
 IRB.start(__FILE__)

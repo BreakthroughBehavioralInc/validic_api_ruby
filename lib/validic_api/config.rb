@@ -1,5 +1,3 @@
-require "dotenv/load"
-
 module ValidicApi
   class Config
     attr_accessor :api_base, :org_id, :token, :org_url

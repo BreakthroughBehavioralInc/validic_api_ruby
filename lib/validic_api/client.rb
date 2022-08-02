@@ -1,5 +1,3 @@
-require "oauth2"
-
 module ValidicApi
   class Client
     attr_reader :config

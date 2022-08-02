@@ -6,4 +6,8 @@ gemspec
 gem "rake", "~> 12.0"
 gem "rspec", "~> 3.0"
 gem "dotenv"
-gem "vcr"
+
+group :test do
+  gem "webmock"
+  gem "vcr"
+end

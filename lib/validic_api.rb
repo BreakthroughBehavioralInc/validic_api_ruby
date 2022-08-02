@@ -3,10 +3,12 @@ require "forwardable"
 
 # Version
 require "validic_api/version"
-require "validic_api/config"
+
 require "validic_api/api_operations/user/create"
 require "validic_api/api_operations/user/delete"
 require "validic_api/api_operations/user/marketplace/refresh_token"
+
+require "validic_api/config"
 
 module ValidicApi
   autoload :Client, "validic_api/client"
