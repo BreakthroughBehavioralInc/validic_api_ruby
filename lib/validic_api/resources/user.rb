@@ -1,6 +1,7 @@
 module ValidicApi
   class User < Resource
     extend ValidicApi::ApiOperations::User::Create
+    extend ValidicApi::ApiOperations::User::Delete
 
     class Marketplace < User
       extend ValidicApi::ApiOperations::User::Marketplace::RefreshToken
