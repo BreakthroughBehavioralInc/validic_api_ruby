@@ -1,3 +1,6 @@
+# Build Status #
+[![CodeQL](https://github.com/BreakthroughBehavioralInc/validic_ruby_api/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/BreakthroughBehavioralInc/validic_ruby_api/actions/workflows/codeql-analysis.yml)
+
 # Validic API
 
 API wrapper for Validic REST API.
@@ -15,15 +18,11 @@ gem 'validic_api_ruby'
 
 And then,
 
-```bash
-bundle install
-```
+$ bundle install
 
 Or install it yourself as:
 
-```bash
-gem install validic_api_ruby
-```
+$ gem install validic_api_ruby
 
 # Usage
 
