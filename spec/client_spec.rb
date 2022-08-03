@@ -1,5 +1,5 @@
 require './lib/validic_api/client.rb'
-require 'pry'
+
 RSpec.describe ValidicApi::Client do
   
   before do

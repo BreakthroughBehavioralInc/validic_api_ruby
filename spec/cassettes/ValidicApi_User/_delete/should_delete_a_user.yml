@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"uid":"2011","location":{"timezone":"America/New_York","country":"US"}}'
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.v2.validic.com
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 03 Aug 2022 05:33:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0b767afb-4867-4d14-812d-452697a1298f
+      X-Runtime:
+      - '0.164897'
+    body:
+      encoding: UTF-8
+      string: '{"errors":{"uid":["already exists"]}}'
+  recorded_at: Wed, 03 Aug 2022 05:33:54 GMT
+- request:
+    method: delete
+    uri: https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users/2011?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.v2.validic.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 03 Aug 2022 05:33:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"d80de6a3ed3d33c2f05963cf509014c6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4396e10c-aeef-43d2-b96f-bfb08d107fc6
+      X-Runtime:
+      - '0.167248'
+      Strict-Transport-Security:
+      - max-age=15638400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"62ea077cb29fd90001d3e2fe","uid":"2011","marketplace":{"token":"958e0d1faa5d07c1e0380e3b61e0b2cfae174b7592eecc484f746620b27e696a","url":"https://syncmydevice.com?token=958e0d1faa5d07c1e0380e3b61e0b2cfae174b7592eecc484f746620b27e696a"},"mobile":{"token":"e6281e18285a5dc88a6f92fc73f4330a"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"deleted","created_at":"2022-08-03T05:28:28Z","updated_at":"2022-08-03T05:28:28Z","deleted_at":"2022-08-03T05:33:55Z"}'
+  recorded_at: Wed, 03 Aug 2022 05:33:55 GMT
+recorded_with: VCR 6.1.0

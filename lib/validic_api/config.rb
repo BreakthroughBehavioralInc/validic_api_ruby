@@ -4,7 +4,7 @@ module ValidicApi
 
     def initialize
       @api_base = "https://api.v2.validic.com"
-      @org_url = "#{api_base}/organizations/#{org_id}"
+      @org_url = "#{api_base}/organizations"
     end
   end
 end

@@ -17,14 +17,13 @@ module ValidicApi
               "Resource is an abstract class. You should perform actions " \
               "on its subclasses (e.g. Person)"
       end
-      "#{client.config.org_url}/#{class_name.downcase}s"
+      "#{client.config.org_url}/#{client.config.org_id}/#{class_name.downcase}s"
     end
 
     def self.execute_request(method, url, params: {}, headers: {})
-      params.merge!(token: client.config.token)
-      headers.merge!(params)
+      headers.merge!("Content-Type": "application/json") if [:put, :post].include?(method)
       begin
-        response = RestClient::Request.execute(method: method, url: url, headers: headers)
+        response = RestClient::Request.execute(method: method, url: "#{url}?token=#{client.config.token}", payload: params.to_json, headers: headers)
         JSON.parse(response.body)
       rescue RestClient::ExceptionWithResponse => e
         JSON.parse(e.response)
