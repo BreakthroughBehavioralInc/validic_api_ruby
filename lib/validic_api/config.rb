@@ -5,6 +5,7 @@ module ValidicApi
     def initialize
       @api_base = "https://api.v2.validic.com"
       @org_url = "#{api_base}/organizations"
+      @streaming_base_url = "https://streams.v2.validic.com"
     end
   end
 end

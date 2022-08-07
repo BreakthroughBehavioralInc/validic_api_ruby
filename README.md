@@ -34,7 +34,7 @@ Example Provisioning a User:
 require 'validic_api_ruby'
 
 ValidicApi.org_id = ENV["VALIDIC_ORG_ID"]
-DockHealthApi.token = ENV["VALIDIC_TOKEN"]
+ValidicApi.token = ENV["VALIDIC_TOKEN"]
 
 params = { 
   uid: "001", 
