@@ -10,6 +10,7 @@ require "validic_api/api_operations/user/marketplace/refresh_token"
 require "validic_api/api_operations/stream/create"
 require "validic_api/api_operations/stream/read"
 require "validic_api/api_operations/stream/delete"
+require "validic_api/api_operations/stream/list"
 
 require "validic_api/config"
 
