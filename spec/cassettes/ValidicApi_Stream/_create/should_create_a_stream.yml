@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://streams.v2.validic.com/streams?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"name":"test_stream"}'
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '22'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 66bd4dce-5a3d-4e4b-9d5a-2f9cb3a79fa5
+      Date:
+      - Sun, 07 Aug 2022 17:34:41 GMT
+      Content-Length:
+      - '246'
+    body:
+      encoding: UTF-8
+      string: '{"id":"62eff7b169120e0001301ec9","group":"stream_62eff7b169120e0001301ec9","name":"test_stream","start_date":null,"resource_filter":null,"event_type_filter":null,"members":0,"created_at":"2022-08-07T17:34:41Z","updated_at":"2022-08-07T17:34:41Z"}'
+  recorded_at: Sun, 07 Aug 2022 17:34:41 GMT
+recorded_with: VCR 6.1.0

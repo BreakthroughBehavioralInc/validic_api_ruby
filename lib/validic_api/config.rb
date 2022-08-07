@@ -1,6 +1,7 @@
 module ValidicApi
   class Config
-    attr_accessor :api_base, :org_id, :token, :org_url
+    attr_accessor :org_id, :token
+    attr_reader :api_base, :streaming_base_url, :org_url
 
     def initialize
       @api_base = "https://api.v2.validic.com"

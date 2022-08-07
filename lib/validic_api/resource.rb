@@ -17,7 +17,7 @@ module ValidicApi
               "Resource is an abstract class. You should perform actions " \
               "on its subclasses (e.g. User)"
       end
-      if class_name.downcase == "Stream"
+      if class_name.downcase == "stream"
         "#{client.config.streaming_base_url}/#{class_name.downcase}s"
       else
         "#{client.config.org_url}/#{client.config.org_id}/#{class_name.downcase}s"

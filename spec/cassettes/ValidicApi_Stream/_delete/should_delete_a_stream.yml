@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://streams.v2.validic.com/streams?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"name":"delete_stream_2"}'
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '26'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - '09cc610a-a331-4c6c-9b6e-f3873d298667'
+      Date:
+      - Sun, 07 Aug 2022 17:40:53 GMT
+      Content-Length:
+      - '250'
+    body:
+      encoding: UTF-8
+      string: '{"id":"62eff9250c75600001a970bc","group":"stream_62eff9250c75600001a970bc","name":"delete_stream_2","start_date":null,"resource_filter":null,"event_type_filter":null,"members":0,"created_at":"2022-08-07T17:40:53Z","updated_at":"2022-08-07T17:40:53Z"}'
+  recorded_at: Sun, 07 Aug 2022 17:40:53 GMT
+- request:
+    method: delete
+    uri: https://streams.v2.validic.com/streams/62eff9250c75600001a970bc?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 1230ce41-97a1-4652-b421-e2e7f0b524e0
+      Date:
+      - Sun, 07 Aug 2022 17:40:53 GMT
+      Content-Length:
+      - '282'
+    body:
+      encoding: UTF-8
+      string: '{"id":"62eff9250c75600001a970bc","group":"stream_62eff9250c75600001a970bc","name":"delete_stream_2","start_date":null,"resource_filter":[],"event_type_filter":[],"members":0,"created_at":"2022-08-07T17:40:53Z","updated_at":"2022-08-07T17:40:53Z","deleted_at":"2022-08-07T17:40:53Z"}'
+  recorded_at: Sun, 07 Aug 2022 17:40:53 GMT
+recorded_with: VCR 6.1.0
