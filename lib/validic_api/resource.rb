@@ -15,9 +15,13 @@ module ValidicApi
       if self == Resource
         raise NotImplementedError,
               "Resource is an abstract class. You should perform actions " \
-              "on its subclasses (e.g. Person)"
+              "on its subclasses (e.g. User)"
       end
-      "#{client.config.org_url}/#{client.config.org_id}/#{class_name.downcase}s"
+      if class_name.downcase == "stream"
+        "#{client.config.streaming_base_url}/#{class_name.downcase}s"
+      else
+        "#{client.config.org_url}/#{client.config.org_id}/#{class_name.downcase}s"
+      end
     end
 
     def self.execute_request(method, url, params: {}, headers: {})
