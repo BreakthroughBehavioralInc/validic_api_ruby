@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://streams.v2.validic.com/streams?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: '{"name":"test_stream"}'
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '22'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - db9ecca7-96dd-49da-9647-776e01c850e1
+      Date:
+      - Wed, 19 Oct 2022 17:57:27 GMT
+      Content-Length:
+      - '246'
+    body:
+      encoding: UTF-8
+      string: '{"id":"63503a870c75600001bc3a13","group":"stream_63503a870c75600001bc3a13","name":"test_stream","start_date":null,"resource_filter":null,"event_type_filter":null,"members":0,"created_at":"2022-10-19T17:57:27Z","updated_at":"2022-10-19T17:57:27Z"}'
+  recorded_at: Wed, 19 Oct 2022 17:57:27 GMT
+- request:
+    method: get
+    uri: https://streams.v2.validic.com/streams/63503a870c75600001bc3a13?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 667a7743-0c2a-439a-bfee-67272620d38e
+      Date:
+      - Wed, 19 Oct 2022 17:57:28 GMT
+      Content-Length:
+      - '242'
+    body:
+      encoding: UTF-8
+      string: '{"id":"63503a870c75600001bc3a13","group":"stream_63503a870c75600001bc3a13","name":"test_stream","start_date":null,"resource_filter":[],"event_type_filter":[],"members":0,"created_at":"2022-10-19T17:57:27Z","updated_at":"2022-10-19T17:57:27Z"}'
+  recorded_at: Wed, 19 Oct 2022 17:57:27 GMT
+- request:
+    method: delete
+    uri: https://streams.v2.validic.com/streams/63503a870c75600001bc3a13?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - streams.v2.validic.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Request-Id:
+      - 57972c29-d9d5-4082-9fff-27d74f15a8ab
+      Date:
+      - Wed, 19 Oct 2022 17:57:28 GMT
+      Content-Length:
+      - '278'
+    body:
+      encoding: UTF-8
+      string: '{"id":"63503a870c75600001bc3a13","group":"stream_63503a870c75600001bc3a13","name":"test_stream","start_date":null,"resource_filter":[],"event_type_filter":[],"members":0,"created_at":"2022-10-19T17:57:27Z","updated_at":"2022-10-19T17:57:27Z","deleted_at":"2022-10-19T17:57:28Z"}'
+  recorded_at: Wed, 19 Oct 2022 17:57:28 GMT
+recorded_with: VCR 6.1.0

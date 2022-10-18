@@ -1,0 +1,22 @@
+name: Validic Api Ruby
+on: [push]
+
+env:
+  VALIDIC_ORG_ID: ${{ secrets.VALIDIC_ORG_ID }}
+  VALIDIC_TOKEN: ${{ secrets.VALIDIC_TOKEN }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.4
+          bundler-cache: true
+      - uses: actions/checkout@v3
+      - name: Build and test with rspec
+        run: |
+          gem install bundler
+          bundle install
+          bundle exec rspec spec

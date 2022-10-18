@@ -3,17 +3,7 @@ require "validic_api"
 require 'dotenv'
 require 'vcr'
 
-Dotenv.load(".env.test")
-
-VCR.configure do |config|
-  config.ignore_localhost = true
-  config.cassette_library_dir = 'spec/cassettes'
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-  config.allow_http_connections_when_no_cassette = true
-  config.filter_sensitive_data('VALIDIC_ORG_ID') { ENV['VALIDIC_ORG_ID'] }
-  config.filter_sensitive_data('VALIDIC_TOKEN') { ENV['VALIDIC_TOKEN'] }
-end
+Dotenv.load
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -25,4 +15,17 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  ValidicApi.org_id = ENV["VALIDIC_ORG_ID"]
+  ValidicApi.token = ENV["VALIDIC_TOKEN"]
+end
+
+VCR.configure do |config|
+  config.ignore_localhost = true
+  config.cassette_library_dir = 'spec/cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.allow_http_connections_when_no_cassette = true
+  config.filter_sensitive_data('VALIDIC_ORG_ID') { ValidicApi.org_id }
+  config.filter_sensitive_data('VALIDIC_TOKEN') { ValidicApi.token }
 end
