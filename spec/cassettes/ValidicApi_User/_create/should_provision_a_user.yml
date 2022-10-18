@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users?token=VALIDIC_TOKEN
     body:
       encoding: UTF-8
-      string: '{"uid":"3013","location":{"timezone":"America/New_York","country":"US"}}'
+      string: '{"location":{"timezone":"America/New_York","country":"US"},"uid":"3015"}'
     headers:
       Accept:
       - "*/*"
@@ -27,7 +27,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 03 Aug 2022 05:34:35 GMT
+      - Tue, 18 Oct 2022 17:36:45 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -48,19 +48,78 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Location:
-      - https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users?created_at=2022-08-03T05%3A34%3A35Z&id=62ea08eb67e8ea00011244ba&location%5Bcountry_code%5D=&location%5Btimezone%5D=America%2FNew_York&marketplace_token=fc73dd9c69d8198cbb7a03dba3a5d84913b9243c38397b2320221119515c3096&mobile%5Btoken%5D=e149e1669db673be27ce94526ae0e388&organization%5Bid%5D=VALIDIC_ORG_ID&status=active&uid=3013&updated_at=2022-08-03T05%3A34%3A35Z
+      - https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users?created_at=2022-10-18T17%3A36%3A45Z&id=634ee42d449a24000176574f&location%5Bcountry_code%5D=&location%5Btimezone%5D=America%2FNew_York&marketplace_token=a2a4268edf9e977c5bcb2a9dbc02da41cb4696fb57ea0884e3807a2127043498&mobile%5Btoken%5D=fd3cea9f20e4abdf02fec3e6d4a4f583&organization%5Bid%5D=VALIDIC_ORG_ID&status=active&uid=3015&updated_at=2022-10-18T17%3A36%3A45Z
       Etag:
-      - W/"0edc83680c36ee5aa3252bb7afa90065"
+      - W/"ad9b709ef406b041f6d004c354b3118d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec1ff435-660e-4606-8179-e5e9384b7f58
+      - 498acd07-9aa0-4975-b41f-e4aaef53ea14
       X-Runtime:
-      - '0.126036'
+      - '0.109354'
       Strict-Transport-Security:
       - max-age=15638400
     body:
       encoding: UTF-8
-      string: '{"id":"62ea08eb67e8ea00011244ba","uid":"3013","marketplace":{"token":"fc73dd9c69d8198cbb7a03dba3a5d84913b9243c38397b2320221119515c3096","url":"https://syncmydevice.com?token=fc73dd9c69d8198cbb7a03dba3a5d84913b9243c38397b2320221119515c3096"},"mobile":{"token":"e149e1669db673be27ce94526ae0e388"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"active","created_at":"2022-08-03T05:34:35Z","updated_at":"2022-08-03T05:34:35Z"}'
-  recorded_at: Wed, 03 Aug 2022 05:34:35 GMT
+      string: '{"id":"634ee42d449a24000176574f","uid":"3015","marketplace":{"token":"a2a4268edf9e977c5bcb2a9dbc02da41cb4696fb57ea0884e3807a2127043498","url":"https://syncmydevice.com?token=a2a4268edf9e977c5bcb2a9dbc02da41cb4696fb57ea0884e3807a2127043498"},"mobile":{"token":"fd3cea9f20e4abdf02fec3e6d4a4f583"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"active","created_at":"2022-10-18T17:36:45Z","updated_at":"2022-10-18T17:36:45Z"}'
+  recorded_at: Tue, 18 Oct 2022 17:36:44 GMT
+- request:
+    method: delete
+    uri: https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users/3015?token=VALIDIC_TOKEN
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin20 x86_64) ruby/3.0.0p0
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.v2.validic.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 18 Oct 2022 17:36:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Etag:
+      - W/"78ee2888551c50530eab9ddb37697c3e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e798ced7-a315-4031-9dd8-0a8a41d8f528
+      X-Runtime:
+      - '0.273013'
+      Strict-Transport-Security:
+      - max-age=15638400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"634ee42d449a24000176574f","uid":"3015","marketplace":{"token":"a2a4268edf9e977c5bcb2a9dbc02da41cb4696fb57ea0884e3807a2127043498","url":"https://syncmydevice.com?token=a2a4268edf9e977c5bcb2a9dbc02da41cb4696fb57ea0884e3807a2127043498"},"mobile":{"token":"fd3cea9f20e4abdf02fec3e6d4a4f583"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"deleted","created_at":"2022-10-18T17:36:45Z","updated_at":"2022-10-18T17:36:45Z","deleted_at":"2022-10-18T17:36:45Z"}'
+  recorded_at: Tue, 18 Oct 2022 17:36:45 GMT
 recorded_with: VCR 6.1.0

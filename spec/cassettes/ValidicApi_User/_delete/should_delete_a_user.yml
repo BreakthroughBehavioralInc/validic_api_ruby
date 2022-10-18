@@ -21,13 +21,13 @@ http_interactions:
       - api.v2.validic.com
   response:
     status:
-      code: 422
-      message: Unprocessable Entity
+      code: 201
+      message: Created
     headers:
       Server:
       - openresty
       Date:
-      - Wed, 03 Aug 2022 05:33:54 GMT
+      - Tue, 18 Oct 2022 16:41:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -40,22 +40,29 @@ http_interactions:
       - 1; mode=block
       X-Content-Type-Options:
       - nosniff
+      - nosniff
       X-Download-Options:
       - noopen
       X-Permitted-Cross-Domain-Policies:
       - none
       Referrer-Policy:
       - strict-origin-when-cross-origin
+      Location:
+      - https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users?created_at=2022-10-18T16%3A41%3A14Z&id=634ed72ae12a2a00016a431d&location%5Bcountry_code%5D=&location%5Btimezone%5D=America%2FNew_York&marketplace_token=a953f1e3ab7c65a31a9e782528d9ece6e0850f95b66a090c87cdca924b65f321&mobile%5Btoken%5D=5933dc4466e514a88dd6dddd7bbce0f6&organization%5Bid%5D=VALIDIC_ORG_ID&status=active&uid=2011&updated_at=2022-10-18T16%3A41%3A14Z
+      Etag:
+      - W/"68b0999d75187d983722b21968bfeba4"
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0b767afb-4867-4d14-812d-452697a1298f
+      - 6a7a3b3b-e56b-4077-b4ef-31d4b2a0d1ce
       X-Runtime:
-      - '0.164897'
+      - '0.139186'
+      Strict-Transport-Security:
+      - max-age=15638400
     body:
       encoding: UTF-8
-      string: '{"errors":{"uid":["already exists"]}}'
-  recorded_at: Wed, 03 Aug 2022 05:33:54 GMT
+      string: '{"id":"634ed72ae12a2a00016a431d","uid":"2011","marketplace":{"token":"a953f1e3ab7c65a31a9e782528d9ece6e0850f95b66a090c87cdca924b65f321","url":"https://syncmydevice.com?token=a953f1e3ab7c65a31a9e782528d9ece6e0850f95b66a090c87cdca924b65f321"},"mobile":{"token":"5933dc4466e514a88dd6dddd7bbce0f6"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"active","created_at":"2022-10-18T16:41:14Z","updated_at":"2022-10-18T16:41:14Z"}'
+  recorded_at: Tue, 18 Oct 2022 16:41:14 GMT
 - request:
     method: delete
     uri: https://api.v2.validic.com/organizations/VALIDIC_ORG_ID/users/2011?token=VALIDIC_TOKEN
@@ -81,7 +88,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 03 Aug 2022 05:33:55 GMT
+      - Tue, 18 Oct 2022 16:41:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -102,17 +109,17 @@ http_interactions:
       Referrer-Policy:
       - strict-origin-when-cross-origin
       Etag:
-      - W/"d80de6a3ed3d33c2f05963cf509014c6"
+      - W/"f6c3d02a27248daf62cc16066608e327"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4396e10c-aeef-43d2-b96f-bfb08d107fc6
+      - c5353025-2e04-4e69-ab29-55086dbf21b0
       X-Runtime:
-      - '0.167248'
+      - '0.165828'
       Strict-Transport-Security:
       - max-age=15638400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":"62ea077cb29fd90001d3e2fe","uid":"2011","marketplace":{"token":"958e0d1faa5d07c1e0380e3b61e0b2cfae174b7592eecc484f746620b27e696a","url":"https://syncmydevice.com?token=958e0d1faa5d07c1e0380e3b61e0b2cfae174b7592eecc484f746620b27e696a"},"mobile":{"token":"e6281e18285a5dc88a6f92fc73f4330a"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"deleted","created_at":"2022-08-03T05:28:28Z","updated_at":"2022-08-03T05:28:28Z","deleted_at":"2022-08-03T05:33:55Z"}'
-  recorded_at: Wed, 03 Aug 2022 05:33:55 GMT
+      string: '{"id":"634ed72ae12a2a00016a431d","uid":"2011","marketplace":{"token":"a953f1e3ab7c65a31a9e782528d9ece6e0850f95b66a090c87cdca924b65f321","url":"https://syncmydevice.com?token=a953f1e3ab7c65a31a9e782528d9ece6e0850f95b66a090c87cdca924b65f321"},"mobile":{"token":"5933dc4466e514a88dd6dddd7bbce0f6"},"location":{"timezone":"America/New_York","country_code":null},"sources":[],"status":"deleted","created_at":"2022-10-18T16:41:14Z","updated_at":"2022-10-18T16:41:14Z","deleted_at":"2022-10-18T16:41:14Z"}'
+  recorded_at: Tue, 18 Oct 2022 16:41:14 GMT
 recorded_with: VCR 6.1.0
