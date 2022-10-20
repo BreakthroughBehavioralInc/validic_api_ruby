@@ -11,7 +11,6 @@ RSpec.describe ValidicApi::User, vcr: { re_record_interval: 604800 } do
 
   let(:params) do
     {
-      uid: "",
       location: {
         timezone: "America/New_York",
         country: "US"
@@ -21,9 +20,10 @@ RSpec.describe ValidicApi::User, vcr: { re_record_interval: 604800 } do
 
   describe "#create" do
     it "should provision a user" do
-      params[:uid] = "3013"
+      params[:uid] = "3015"
       user = ValidicApi::User.create(params)
       expect(user.uid).to eq(params[:uid])
+      ValidicApi::User.delete(params[:uid])
     end
   end
 
@@ -36,13 +36,25 @@ RSpec.describe ValidicApi::User, vcr: { re_record_interval: 604800 } do
     end
   end
 
+  describe "#profile" do
+    it "should get a users profile" do
+      params[:uid] = "3013"
+      ValidicApi::User.create(params)
+      user = ValidicApi::User.profile(params[:uid])
+      expect(user.uid).to eq(params[:uid])
+      ValidicApi::User.delete(params[:uid])
+    end
+  end
+
   describe "marketplace#refresh_token" do
     it "should refresh a user marketplace token" do
       params[:uid] = "2012"
-      created_user = ValidicApi::User.create(params)
-      old_token = created_user.marketplace.token
-      refreshed_marketplace = ValidicApi::User::Marketplace.refresh_token(created_user.uid)
+      ValidicApi::User.create(params)
+      user = ValidicApi::User.profile(params[:uid])
+      old_token = user.marketplace.token
+      refreshed_marketplace = ValidicApi::User::Marketplace.refresh_token(user.uid)
       expect(refreshed_marketplace.token).to_not eq(old_token)
+      ValidicApi::User.delete(params[:uid])
     end
   end
 end

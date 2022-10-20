@@ -6,6 +6,7 @@ require "validic_api/version"
 
 require "validic_api/api_operations/user/create"
 require "validic_api/api_operations/user/delete"
+require "validic_api/api_operations/user/profile"
 require "validic_api/api_operations/user/marketplace/refresh_token"
 require "validic_api/api_operations/stream/create"
 require "validic_api/api_operations/stream/read"
